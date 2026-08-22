@@ -158,6 +158,20 @@
     <p>Peachy Clean &copy; 2026</p>
   </footer>
 
+  <script>
+  const specialRequestToggle = document.getElementById("specialRequestToggle");
+  const specialRequestDetails = document.getElementById("specialRequestDetails");
+
+  specialRequestToggle.addEventListener("change", function () {
+    if (this.checked) {
+      specialRequestDetails.style.display = "block";
+    } else {
+      specialRequestDetails.style.display = "none";
+    }
+  });
+</script>
+
+
 </body>
   <!-- Navigation -->
   <nav style="
@@ -233,7 +247,8 @@
       gap: 20px;
     ">
 
-      <div style="
+      <a href="#quote" style="text-decoration: none; color: inherit;">
+        <div style="
         background: #FFFFFF;
         padding: 25px;
         border-radius: 15px;
@@ -245,8 +260,10 @@
           fresh, comfortable, and tidy.
         </p>
       </div>
+        </a>
 
-      <div style="
+      <a href="#quote" style="text-decoration: none; color: inherit;">
+        <div style="
         background: #FFFFFF;
         padding: 25px;
         border-radius: 15px;
@@ -257,8 +274,10 @@
           A more detailed cleaning for homes that need
           extra attention and a fresh start.
         </p>
-      </div>
+      </div> 
+        </a>
 
+    <a href="#quote" style="text-decoration: none; color: inherit;">
       <div style="
         background: #FFFFFF;
         padding: 25px;
@@ -271,8 +290,10 @@
           moving day a little easier.
         </p>
       </div>
+      </a>
 
-      <div style="
+  <a href="#quote" style="text-decoration: none; color: inherit;">
+       <div style="
         background: #FFFFFF;
         padding: 25px;
         border-radius: 15px;
@@ -284,9 +305,10 @@
           service around your home's needs.
         </p>
       </div>
+      </a>
 
     </div>
-
+    
   </section> 
   <!-- Packages & Services -->
   <section id="bundles" style="
@@ -418,15 +440,56 @@
         </p>
 
         <ul style="margin: 10px 0 0 20px;">
-          <li>Laundry</li>
-          <li>Inside refrigerator</li>
-          <li>Inside oven</li>
-          <li>Baseboards</li>
-          <li>Cabinet interiors</li>
-          <li>Extra bathroom cleaning</li>
-          <li>Extra kitchen cleaning</li>
-          <li>Other special requests</li>
-        </ul>
+          <div style="margin-top: 15px;">
+  <label><input type="checkbox" name="service" value="laundry"> Laundry</label><br>
+  <label><input type="checkbox" name="service" value="refrigerator"> Inside refrigerator</label><br>
+  <label><input type="checkbox" name="service" value="oven"> Inside oven</label><br>
+  <label><input type="checkbox" name="service" value="baseboards"> Baseboards</label><br>
+  <label><input type="checkbox" name="service" value="cabinets"> Cabinet interiors</label><br>
+  <label><input type="checkbox" name="service" value="bathroom"> Extra bathroom cleaning</label><br>
+  <label><input type="checkbox" name="service" value="kitchen"> Extra kitchen cleaning</label><br>
+  <label>
+  <input type="checkbox" id="specialRequestToggle">
+  Other special requests
+</label>
+
+<div id="specialRequestDetails" style="display: none; margin: 15px 0 0 25px;">
+
+  <p><strong>Additional Cleaning Options</strong></p>
+
+  <label><input type="checkbox" name="service" value="windows"> Interior windows</label><br>
+  <label><input type="checkbox" name="service" value="walls"> Spot-clean walls</label><br>
+  <label><input type="checkbox" name="service" value="light-fixtures"> Light fixtures</label><br>
+  <label><input type="checkbox" name="service" value="ceiling-fans"> Ceiling fans</label><br>
+  <label><input type="checkbox" name="service" value="blinds"> Blinds</label><br>
+  <label><input type="checkbox" name="service" value="doors"> Doors and door frames</label><br>
+  <label><input type="checkbox" name="service" value="closets"> Closet interiors</label><br>
+  <label><input type="checkbox" name="service" value="laundry-folding"> Laundry / folding</label><br>
+
+  <label>
+    <input type="checkbox" name="service" value="carpet-shampoo">
+    Carpet shampooing
+  </label>
+
+  <p style="font-size: 0.9rem; margin-top: 5px;">
+    Carpet shampooing may require equipment rental. Any rental cost,
+    along with the cleaning service and labor time, will be included
+    in your quote.
+  </p>
+
+  <p style="margin-top: 15px;">
+    <strong>Something else?</strong>
+  </p>
+
+  <textarea
+    name="special_instructions"
+    placeholder="Tell us what you'd like cleaned or anything else we should know..."
+    rows="5"
+    style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;"
+  ></textarea>
+
+</div>
+          </div>
 
       </div>
 
