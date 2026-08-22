@@ -159,14 +159,15 @@
   </footer>
 
   <script>
-  const specialRequestToggle = document.getElementById("specialRequestToggle");
-  const specialRequestDetails = document.getElementById("specialRequestDetails");
+  document.addEventListener("DOMContentLoaded", function () {
+    const specialRequestToggle = document.getElementById("specialRequestToggle");
+    const specialRequestDetails = document.getElementById("specialRequestDetails");
 
-  specialRequestToggle.addEventListener("change", function () {
-    if (this.checked) {
-      specialRequestDetails.style.display = "block";
-    } else {
-      specialRequestDetails.style.display = "none";
+    if (specialRequestToggle && specialRequestDetails) {
+      specialRequestToggle.addEventListener("change", function () {
+        specialRequestDetails.style.display =
+          this.checked ? "block" : "none";
+      });
     }
   });
 </script>
